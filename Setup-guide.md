@@ -43,14 +43,18 @@
 
 ---
 
-## 🌐 Step 3: Setup Load Balancers
+## 🌐 Step 3: Setup Target Group and Load Balancers
 
-1. In Region A, create an **Application Load Balancer (ALB)**.
+1. In Region A, create an **Target Group**.
+   
+   select EC2 instances that you want to target.
+   
+2. In Region A, create an **Application Load Balancer (ALB)**.
 
    * Attach ALB to the 2 subnets in different AZs.
    * Target Group → attach the ASG.
    * Listener → HTTP (80) forward to Target Group.
-2. Repeat the same steps in Region B.
+3. Repeat the same steps in Region B.
 
 ---
 
